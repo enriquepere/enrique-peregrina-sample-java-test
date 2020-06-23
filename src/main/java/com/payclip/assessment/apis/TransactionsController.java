@@ -31,7 +31,7 @@ public class TransactionsController {
 			throw new InvalidRequestException("Invalid user provided");
 		
 		if (data.getDate() == null || !data.getDate().matches("\\d{4}-\\d{2}-\\d{2}"))
-			throw new InvalidRequestException("Invalid date provided");
+			throw new InvalidRequestException("Invalid date provided, valid date has YYYY/mm/DD format");
         
 		return transSrv.addTransaction(data);
 	}
